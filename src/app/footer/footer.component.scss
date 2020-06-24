@@ -1,0 +1,39 @@
+.cl-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  .red-rect{
+    width: 207px;
+    height: 181.5px;
+    border-radius: 5px;
+    background-color: #a80e0e;
+    position: absolute;
+    left: 15%;
+    margin-top: 11%;
+  }
+  .client-img{
+    width: 335px;
+    height: 318px;
+    object-fit: contain;
+    border-radius: 5px;
+    background-image: url('../../assets/client/c1.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    z-index: 2;
+  }
+  .Group1346{
+    width: 49.8px;
+    height: 42px;
+    object-fit: contain;
+    background-image: url('../../assets/svg/Group 1346.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+  }
+  .comment{
+    width: 30%;
+    margin: 2%;
+
+  }
+}

@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "cashify"
+    }
+  },
+  "defaultProject": "cashify",
+  "cli": {
+    "analytics": false
+  }
 }

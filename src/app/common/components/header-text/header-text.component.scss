@@ -1,0 +1,29 @@
+
+.m-container{
+  width: 100%;
+  color: #a80e0e;
+  .Want-To-Eat {
+    height: 46px;
+     font-size: 25px;
+    line-height: 3.8;
+    letter-spacing: 0.75px;
+    text-align: center;
+  }
+  .try {
+    height: 12px;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 3.5;
+    text-align: center;
+    color: #a80e0e;
+  }
+  .brush {
+    width: 188.5px;
+    height: 6.5px;
+    background-image: url('../../../../assets/svg/brush.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    margin: 0 auto;
+  }
+}
