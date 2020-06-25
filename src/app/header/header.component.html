@@ -13,7 +13,7 @@
   </div>
 </div>
  <owl-carousel-o [options]="customOptions" #owlCar>
-  <ng-container *ngFor="let slide of images">
+  <ng-container *ngFor="let slide of images$ | async">
     <ng-template carouselSlide [id]="slide.id" [width]="100" >
       <div class="df-db">
         <div class="Party-Time">Party Time!</div>

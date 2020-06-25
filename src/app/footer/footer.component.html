@@ -1,11 +1,19 @@
 <app-header-text heading="Client Testimonials"></app-header-text>
-<div class="cl-container">
-  <div class="red-rect"></div>
-  <div class="client-img"></div>
-  <div class="comment">
-    <div class="Group1346" ></div>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    <h5>Nina Margaret</h5>
-    <p>CEO, Abc Company</p>
-  </div>
+<div class="comment-carousal">
+  <owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let slide of comments$ | async">
+      <ng-template carouselSlide [width]="100">
+        <div class="cl-container">
+          <div class="red-rect"></div>
+          <div class="client-img"></div>
+          <div class="comment">
+            <div class="Group1346" ></div>
+            <p>{{slide.desc}}</p>
+            <h5>{{slide.clientName}}</h5>
+            <p>{{slide.position}}, {{slide.company}}</p>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+   </owl-carousel-o>
 </div>

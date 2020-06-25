@@ -2,6 +2,7 @@ import { ApiService } from './../common/services/api.service';
 import { Component, AfterViewInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { TopMenu } from '../models/fav';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -9,9 +10,9 @@ import { TopMenu } from '../models/fav';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements AfterViewInit {
+export class HeaderComponent {
   navResClass = 'topnav';
-  images: TopMenu[];
+  images$: Observable<TopMenu[]> = this.api.getTopMenu();
   customOptions: OwlOptions = {
       autoHeight: true,
       center: true,
@@ -23,9 +24,6 @@ export class HeaderComponent implements AfterViewInit {
   };
   constructor(private api: ApiService) {}
 
-  ngAfterViewInit(): void {
-    this.api.getTopMenu().subscribe(lis => this.images = lis);
-  }
   myFunction() {
     if (this.navResClass === 'topnav') {
       this.navResClass += ' responsive';

@@ -1,6 +1,6 @@
 import { ServiceList } from './../models/fav';
 import { ApiService } from './../common/services/api.service';
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { EatOption } from '../models/fav';
 import { forkJoin } from 'rxjs';
@@ -10,8 +10,7 @@ import { forkJoin } from 'rxjs';
   templateUrl: './middle.component.html',
   styleUrls: ['./middle.component.scss']
 })
-export class MiddleComponent implements AfterViewInit {
-  list: EatOption[];
+export class MiddleComponent implements OnInit {
   customOptions: OwlOptions = {
       autoHeight: true,
           center: true,
@@ -37,9 +36,10 @@ export class MiddleComponent implements AfterViewInit {
     };
 
   fetures: ServiceList[];
+  list: EatOption[];
   constructor(private api: ApiService) { }
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     forkJoin([this.api.getEatOption(), this.api.getServicesList()])
     .subscribe(res => {
       this.list = res[0];
