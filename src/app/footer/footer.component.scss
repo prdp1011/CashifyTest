@@ -37,5 +37,30 @@
     margin: 2%;
 
   }
-}
 
+}
+@media screen and (max-width: 600px) {
+  .cl-container{
+    height: 10em;
+    .client-img{
+      width: 40%;
+      height: 73%;
+    }
+    .red-rect{
+      width: 28%;
+      height: 39%;
+      left: 7%;
+      margin-top: 20%;
+    }
+    .Group1346{
+      width: 25%;
+      height: 17%;
+    }
+    p {
+      font-size: 3%;
+    }
+    h5 {
+      font-size: 50%;
+    }
+  }
+}

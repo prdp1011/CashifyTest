@@ -1,6 +1,4 @@
 
-.df-db{
-
   .burger-icon{
     width: 106px;
     height: 73.1px;
@@ -9,10 +7,11 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100%;
-        z-index: 2;
+    z-index: 2;
     position: absolute;
     margin: 3%;
   }
+.df-db{
   .Party-Time {
     height: 55.5px;
     font-size: 48px;
@@ -120,7 +119,7 @@
     top: 35%;
   }
 }
-
+// nav bar
 .topnav {
   overflow: hidden;
   width: 50%;
@@ -155,15 +154,21 @@
   display: none;
 }
 
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+@media screen and (max-width: 900px) {
+  .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
+    background-color: #281923;
+  }
+  .topnav{
+    width: 14%;
+    right: 0;
+    left: inherit;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;

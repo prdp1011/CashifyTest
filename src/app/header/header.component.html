@@ -1,7 +1,6 @@
 
-<div class="df-db">
   <div class="burger-icon"></div>
-  <div class="topnav" #ele>
+  <div [class]="navResClass" #ele>
     <a href="#home">Home</a>
     <a href="#Menu">Menu</a>
     <a href="#Gallery">Gallery</a>
@@ -11,7 +10,6 @@
       <i class="fa fa-bars"></i>
     </a>
   </div>
-</div>
  <owl-carousel-o [options]="customOptions" #owlCar>
   <ng-container *ngFor="let slide of images$ | async">
     <ng-template carouselSlide [id]="slide.id" [width]="100" >

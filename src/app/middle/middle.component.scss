@@ -1,11 +1,22 @@
 .header-img{
-  background-color: #a80e0e;
   background-image: url('../../assets/svg/Group 1397.svg');
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
   height: 35.8px;
-  margin-bottom: -10px;
+  position: absolute;
+  z-index: 2;
+  margin-top: -1%;
+}
+.bottom-img{
+  background-image: url('../../assets/svg/Group 1419.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 35.8px;
+  position: absolute;
+  z-index: 2;
+  margin-top: -1%;
 }
 .rec{
   width: 124px;
@@ -49,26 +60,26 @@
 }
 .car-fetures{
   background-color: #ffaa00;
+  padding-top: 2%;
+  padding-bottom: 2%;
   .small-card{
-    width: 230px;
     height: 230px;
     box-shadow: 0 7.5px 7.5px 0 rgba(0, 0, 0, 0.07);
     background-color: #fff;
     text-align: center;
     margin: 16px;
+    border-radius: 2%;
     & img{
       padding-top: 10px;
     }
     & p{
       padding: 1px;
     }
-    &.selected{
-    //   width: 226.8px;
-    //  height: 219.8px;
-    //  box-shadow: 0 7.5px 7.5px 0 rgba(0, 0, 0, 0.07);
+    &.mid{
+      height: 250px;
     }
-    &:hover{
-
+    &.large{
+      height: 280px;
     }
   }
 }

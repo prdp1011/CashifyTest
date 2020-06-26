@@ -12,7 +12,7 @@ import { forkJoin } from 'rxjs';
 })
 export class MiddleComponent implements OnInit {
   customOptions: OwlOptions = {
-      autoHeight: true,
+          autoHeight: false,
           center: true,
           nav: false,
           items: 5,
@@ -32,7 +32,8 @@ export class MiddleComponent implements OnInit {
             },
             940: {
               items: 5
-            }}
+            }
+          }
     };
 
   fetures: ServiceList[];
